@@ -17,7 +17,6 @@ module.exports = (config) => {
   config.addPassthroughCopy("./src/manifest.json");
   config.addPassthroughCopy("./src/fonts/");
   config.addPassthroughCopy("./src/images/");
-  config.addPassthroughCopy("./src/css/");
 
   // Allow JavaScript to be minified via the jsmin Nunjucks filter
   // https://www.11ty.dev/docs/quicktips/inline-js/
