@@ -1,15 +1,31 @@
 {
   "name": "nbau",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Not Business As Usual website",
+  "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:sass": "sass --watch src/sass:src/css",
+    "build:sass": "sass src/sass:src/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/futuresuper/nbau.git"
+  },
+  "author": "Future Super",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/futuresuper/nbau#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "clean-css": "^4.2.3",
+    "eleventy-plugin-svg-contents": "^0.7.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.29.0",
+    "terser": "^5.5.0"
   }
 }
