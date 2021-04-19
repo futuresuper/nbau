@@ -10,13 +10,10 @@ const CleanCSS = require("clean-css");
 const svgContents = require("eleventy-plugin-svg-contents");
 
 module.exports = (config) => {
-  // Watch for changes in /sass
-  config.addWatchTarget("./src/sass/");
-
   // Take the contents of /the following directories and pass through to /dist
-  config.addPassthroughCopy("./src/manifest.json");
   config.addPassthroughCopy("./src/fonts/");
-  config.addPassthroughCopy("./src/images/");
+  config.addPassthroughCopy("./src/css/");
+  config.addPassthroughCopy("./src/scripts/");
 
   // Allow JavaScript to be minified via the jsmin Nunjucks filter
   // https://www.11ty.dev/docs/quicktips/inline-js/

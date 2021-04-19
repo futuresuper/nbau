@@ -4,11 +4,9 @@
   "description": "Not Business As Usual website",
   "main": ".eleventy.js",
   "scripts": {
-    "watch:sass": "sass --watch src/sass:src/css",
-    "build:sass": "sass src/sass:src/css",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
-    "start": "npm-run-all build:sass --parallel watch:*",
+    "start": "npm-run-all --parallel watch:*",
     "build": "npm-run-all build:*"
   },
   "repository": {
