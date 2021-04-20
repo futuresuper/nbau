@@ -1,5 +1,6 @@
 <style>
-  .form-overlay {
+  #form-overlay {
+    display: none;
     position: absolute;
     top: 0;
     z-index: 90;
@@ -7,17 +8,16 @@
     min-height: 300vh;
     background: white;
     padding: 20px;
-    display: flex;
     align-items: center;
     flex-direction: column;
   }
 
-  .form-overlay > h2 {
+  #form-overlay > h2 {
     font-size: 80px;
     margin-bottom: 0;
   }
 
-  .form-overlay > p {
+  #form-overlay > p {
     font-size: 24px;
   }
 
@@ -59,12 +59,30 @@
     margin-bottom: 40px;
     outline: none;
   }
+
+  #cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 </style>
 
-<div class="form-overlay">
+<div id="form-overlay">
+  <svg
+    id="cross"
+    onclick="showPledgeOverlay(false)"
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M19.5 1L1 19.5" stroke="black" />
+    <path d="M1 1L19.5 19.5" stroke="black" />
+  </svg>
   <h2>Join Us</h2>
   <p>Pledge to support your employees to strike for the climate on 21 May.</p>
-  <form action="post">
+  <form name="NBAU Pledges" method="POST" data-netlify="true">
     <div>
       <label for="first">First Name</label>
       <input id="first" type="text" required />
