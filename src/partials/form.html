@@ -85,31 +85,31 @@
   <form name="NBAU Pledges" method="POST" data-netlify="true">
     <div>
       <label for="first">First Name</label>
-      <input id="first" type="text" required />
+      <input id="first" name="First Name" type="text" required />
     </div>
     <div>
       <label for="last">Last name</label>
-      <input id="last" type="text" required />
+      <input id="last" name="Last Name" type="text" required />
     </div>
     <div class="full-width">
       <label for="company">Company Name</label>
-      <input id="company" type="text" required />
+      <input id="company" name="Company" type="text" required />
     </div>
     <div>
       <label for="position">Your Position</label>
-      <input id="position" type="text" required />
+      <input id="position" name"Position" type="text" required />
     </div>
     <div>
       <label for="size">Size of company</label>
-      <input id="size" type="number" required />
+      <input id="size" name="Number of employees" type="number" required />
     </div>
     <div>
       <label for="email">Contact Email</label>
-      <input id="email" type="email" required />
+      <input id="email" name="Email" type="email" required />
     </div>
     <div>
       <label for="phone">Contact Phone</label>
-      <input id="phone" type="text" required />
+      <input id="phone" name="Phone" type="text" required />
     </div>
     <div class="full-width">
       <label for="plan">How do you plan to guarantee time to strike?</label>
@@ -117,17 +117,28 @@
         eg We're closing our doors / We're offering a long lunch break / No
         meetings all day
       </p>
-      <input id="plan" type="text" required />
+      <input id="plan" name="How plan to support" type="text" required />
     </div>
     <div class="full-width centred">
-      <input type="checkbox" id="disc1" value="disc1" />
+      <input
+        type="checkbox"
+        id="disc1"
+        name="List publically and press"
+        value="disc1"
+      />
       <label for="disc1"
         >We're happy to be listed publicly on the website and in any
         press.</label
       >
     </div>
     <div class="full-width centred">
-      <input type="checkbox" id="disc2" value="disc2" required />
+      <input
+        type="checkbox"
+        id="disc2"
+        name="Consent to share with SS4C"
+        value="disc2"
+        required
+      />
       <label for="disc2"
         >We’re happy for use to share our details with SS4C.</label
       >
