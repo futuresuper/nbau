@@ -9,19 +9,7 @@ function getQueryVariable(variable) {
   }
 }
 
-function showPledgeOverlay(show) {
-  if (show) {
-    document.getElementById("form-overlay").style.display = "flex";
-  } else {
-    document.getElementById("form-overlay").style.display = "none";
-  }
-}
-
 window.onload = function () {
-  if (getQueryVariable("form")) {
-    showPledgeOverlay(true);
-  }
-
   const first = getQueryVariable("first");
   const last = getQueryVariable("last");
   const company = getQueryVariable("company");
