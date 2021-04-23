@@ -48,6 +48,7 @@
 
       .explainer {
         color: grey;
+        font-size: 18px;
       }
 
       input[type="text"],
@@ -78,6 +79,9 @@
           font-weight: 700;
           font-size: 22px;
         }
+        .explainer {
+          font-size: 14px;
+        }
       }
     </style>
     <div id="form-overlay">
@@ -95,16 +99,17 @@
           <label for="last">Last name</label>
           <input id="last" name="last" type="text" required />
         </div>
-        <div class="full-width">
+        <div>
           <label for="company">Company Name</label>
           <input id="company" name="company" type="text" required />
         </div>
         <div>
-          <label for="position">Your Position</label>
-          <input id="position" name="position" type="text" required />
-        </div>
-        <div>
-          <label for="size">Size of company</label>
+          <label for="size"
+            >Company Size
+            <span style="font-size: 17px; color: grey"
+              >(Approx. number of employees)</span
+            ></label
+          >
           <input id="size" name="size" type="number" required />
         </div>
         <div>
@@ -129,24 +134,29 @@
             id="disc1"
             name="List publically and press"
             value="yes"
+            required
           />
           <label for="disc1" class="checkbox"
-            >We're happy to be listed publicly on the website and in any
-            press.</label
-          >
+            >We consent to our business name being published on the NBAU website
+            and in any associated press. This information may also feature on
+            social media for the purposes of advertising the NBAU campaign. In
+            addition to this, Future Super will share all information provided
+            with School Strike 4 Climate for the purposes of providing updates
+            about the 2021 strike and future campaigns.
+          </label>
         </div>
-        <div class="full-width">
+        <div class="full-width centred">
           <input
             type="checkbox"
             id="disc2"
-            name="Consent to share with SS4C"
+            name="DM Consent"
             value="yes"
             required
           />
           <label for="disc2" class="checkbox"
-            >Please forward our details to strike organisers: School Strike 4
-            Climate Australia.</label
-          >
+            >We're happy for you and School Strike 4 Climate to send us emails,
+            sms, or other communications about this campaign.
+          </label>
         </div>
         <button
           class="button full-width"
