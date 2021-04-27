@@ -36,4 +36,47 @@
     href="https://res.cloudinary.com/future-super/image/upload/v1618988091/nbau_favicon.png"
   />
   <link rel="stylesheet" href="{{ '/css/main.css' | url }}" />
+  <script type="text/javascript">
+    (function (o) {
+      var b = "https://turbolion.io/anywhere/",
+        t = "ea0d75f77e55427f96e8a5109369aaee68f4b26fb6a648f186f29350bc1a7f62",
+        a = (window.AutopilotAnywhere = {
+          _runQueue: [],
+          run: function () {
+            this._runQueue.push(arguments);
+          },
+        }),
+        c = encodeURIComponent,
+        s = "SCRIPT",
+        d = document,
+        l = d.getElementsByTagName(s)[0],
+        p =
+          "t=" +
+          c(d.title || "") +
+          "&u=" +
+          c(d.location.href || "") +
+          "&r=" +
+          c(d.referrer || ""),
+        j = "text/javascript",
+        z,
+        y;
+      if (!window.Autopilot) window.Autopilot = a;
+      if (o.app) p = "devmode=true&" + p;
+      z = function (src, asy) {
+        var e = d.createElement(s);
+        e.src = src;
+        e.type = j;
+        e.async = asy;
+        l.parentNode.insertBefore(e, l);
+      };
+      y = function () {
+        z(b + t + "?" + p, true);
+      };
+      if (window.attachEvent) {
+        window.attachEvent("onload", y);
+      } else {
+        window.addEventListener("load", y, false);
+      }
+    })({});
+  </script>
 </head>
