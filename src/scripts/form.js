@@ -14,10 +14,10 @@ window.onload = function () {
   const last = getQueryVariable("last");
   const company = getQueryVariable("company");
   const position = getQueryVariable("position");
-  const size = getQueryVariable("size");
   const email = getQueryVariable("email");
-  const phone = getQueryVariable("phone");
-  const plan = getQueryVariable("plan");
+  const phone = getQueryVariable("phone")
+    ? getQueryVariable("phone")
+    : getQueryVariable("mobile");
   if (first) {
     document.getElementById("first").value = first;
   }
@@ -30,16 +30,10 @@ window.onload = function () {
   if (position) {
     document.getElementById("position").value = position;
   }
-  if (size) {
-    document.getElementById("size").value = size;
-  }
   if (email) {
     document.getElementById("email").value = email;
   }
   if (phone) {
     document.getElementById("phone").value = phone;
-  }
-  if (plan) {
-    document.getElementById("plan").value = plan;
   }
 };
