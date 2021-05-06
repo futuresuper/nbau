@@ -116,7 +116,7 @@ header {
   align-items: center;
 }
 
-#num-pledged {
+#num-pledged-block {
   padding-top: 4px;
 }
 
@@ -202,6 +202,7 @@ p.big {
   font-weight: 700;
   font-size: 150px;
   margin: 0;
+  padding-top: 12px;
 }
 
 p.text-below-big {
@@ -221,6 +222,16 @@ img {
 
 svg.logo {
   justify-self: end;
+}
+
+#list-of-participants {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-transform: uppercase;
+  column-gap: 40px;
+  row-gap: 20px;
+  font-size: 16px;
 }
 
 @media (max-width: 960px) {
@@ -302,5 +313,10 @@ svg.logo {
 
   h3.footer {
     font-size: 18px;
+  }
+
+  #list-of-participants {
+    grid-template-columns: 100%;
+    font-size: 14px;
   }
 }
