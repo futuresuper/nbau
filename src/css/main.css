@@ -216,6 +216,17 @@ img {
   max-width: 100%;
 }
 
+.logos {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-bottom: 40px;
+}
+
+.logos > img {
+  width: 250px;
+  height: 100px;
+}
+
 .who-we-are-pledged {
   border-right: 1px solid black;
 }
@@ -234,6 +245,12 @@ svg.logo {
   font-size: 16px;
 }
 
+@media (max-width: 1100px) {
+  .logos {
+    grid-template-columns: 50% 50%;
+  }
+}
+
 @media (max-width: 960px) {
   p.big {
     font-size: 90px;
@@ -243,6 +260,10 @@ svg.logo {
 @media (max-width: 740px) {
   body {
     font-size: 15px;
+  }
+
+  .logos {
+    grid-template-columns: 100%;
   }
 
   .header-right {

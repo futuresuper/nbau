@@ -12,6 +12,7 @@ const svgContents = require("eleventy-plugin-svg-contents");
 module.exports = (config) => {
   // Take the contents of /the following directories and pass through to /dist
   config.addPassthroughCopy("./src/fonts/");
+  config.addPassthroughCopy("./src/logos/");
   config.addPassthroughCopy("./src/css/");
   config.addPassthroughCopy("./src/scripts/");
 
